@@ -1,0 +1,156 @@
+$offsets = [
+    'task_scheduler::pointer' => '0x8a44d68', // from 0x7cf5400 to 0x8a44d68
+    'task_scheduler::job_start' => '0xc8', // from 0x1d0 to 0xc8
+    'task_scheduler::job_end' => '0xd0', // from 0x1d8 to 0xd0
+    'task_scheduler::job_name' => '0x18',
+    'task_scheduler::job_stride' => '0x10', // not found
+    'task_scheduler::render_job_to_fake_datamodel' => '0x38',
+    'task_scheduler::fake_datamodel_to_datamodel' => '0x1f8', // from 0x1d0 to 0x1f8
+    'task_scheduler::render_job_to_renderview' => '0x1d8', // from 0x1d0 to 0x1d8
+    'task_scheduler::max_fps' => '0xb0', // from 0x1b0 to 0xb0
+    'task_scheduler::target_fps' => '0x0', // not found
+
+    'datamodel::datamodel_ptr0' => '0x8ca9cc8', // from 0x7c1a148 to 0x8ca9cc8
+    'datamodel::datamodel_ptr1' => '0x1f8', // from 0x1d0 to 0x1f8
+    'datamodel::place_id' => '0x190', // from 0x198 to 0x190
+
+    'visualengine::visualengine_ptr' => '0x82e2128', // from 0x77c6670 to 0x82e2128
+    'visualengine::view_matrix' => '0x180', // from 0x130 to 0x180
+    'visualengine::dimensions' => '0xae0', // from 0xa90 to 0xae0
+
+    'renderview::force_flag_byte' => '0x150', // from 0x148 to 0x150
+    'renderview::force_flag_bool' => '0x28d', // from 0x2cd to 0x28d
+
+    'players::local_player' => '0x130',
+
+    'player::display_name' => '0x138', // from 0x130 to 0x138
+    'player::user_id' => '0xd0', // from 0x2c8 to 0xd0
+    'player::team' => '0x2d8', // from 0x2a0 to 0x2d8
+    'player::team_color' => '0x3b0', // from 0x364 to 0x3b0
+    'player::character' => '0x298', // from 0x398 to 0x298
+
+    'base_part::primitive' => '0x188', // from 0x148 to 0x188
+    'base_part::size' => '0x1bc', // from 0x1b0 to 0x1bc
+    'base_part::position' => '0xec', // from 0xe4 to 0xec
+    'base_part::cframe_rotation' => '0xc8', // from 0xc0 to 0xc8
+    'base_part::assembly_linear_velocity' => '0xf8', // from 0xf0 to 0xf8
+    'base_part::assembly_angular_velocity' => '0x104', // from 0xfc to 0x104
+    'base_part::can_collide' => '0x8', // from 0x1b6 to 0x8
+    'base_part::can_collide_mask' => '0x8',
+    'base_part::material' => '0x0', // from 0x22e to 0x0
+    'base_part::transparency' => '0x130', // from 0xf0 to 0x130
+    'base_part::color3' => '0x1a8', // from 0x194 to 0x1a8
+    'base_part::primitive_properties' => '0x0', // not found
+    'base_part::primitive_position' => '0xec', // from 0x90 to 0xec
+    'base_part::validate' => '0x6', // from 0x8 to 0x6
+    'base_part::shape' => '0x1b9', // from 0x1b1 to 0x1b9
+
+    'humanoid::humanoid_state_id' => '0x20',
+    'humanoid::move_direction' => '0x140', // from 0x158 to 0x140
+    'humanoid::floor_material' => '0x184', // from 0x190 to 0x184
+    'humanoid::health' => '0x190', // from 0x194 to 0x190
+    'humanoid::hip_height' => '0x194', // from 0x1a0 to 0x194
+    'humanoid::jump_height' => '0x1a0', // from 0x1ac to 0x1a0
+    'humanoid::jump_power' => '0x1a4', // from 0x1b0 to 0x1a4
+    'humanoid::max_health' => '0x1a8', // from 0x1b4 to 0x1a8
+    'humanoid::max_slope_angle' => '0x1ac', // from 0x1b8 to 0x1ac
+    'humanoid::rig_type' => '0x1c0', // from 0x1cc to 0x1c0
+    'humanoid::walk_speed' => '0x1d0', // from 0x1dc to 0x1d0
+    'humanoid::auto_rotate' => '0x1d5', // from 0x1e1 to 0x1d5
+    'humanoid::jump' => '0x1da', // from 0x1e6 to 0x1da
+    'humanoid::humanoid_state' => '0x8c0', // from 0x8a0 to 0x8c0
+    'humanoid::walk_speed_check' => '0x3bc', // from 0x3c4 to 0x3bc
+
+    'value_bool::value' => '0xb8', // from 0xd0 to 0xb8
+    'value_int::value' => '0xb8', // from 0xd0 to 0xb8
+    'value_number::value' => '0xb8', // from 0xd0 to 0xb8
+
+    'instance::attribute_container' => '0x48',
+    'instance::attribute_list' => '0x18',
+    'instance::attribute_to_next' => '0x58',
+    'instance::attribute_to_value' => '0x18',
+    'instance::children_end' => '0x8',
+    'instance::children_start' => '0x78', // from 0x70 to 0x78
+    'instance::class_base' => '0x1b0', // from 0xe48 to 0x1b0
+    'instance::class_descriptor' => '0x18',
+    'instance::class_name' => '0x8',
+    'instance::name' => '0x70', // from 0xb0 to 0x70
+    'instance::parent' => '0x68', // from 0x70 to 0x68
+    'instance::current_camera' => '0x498', // from 0x490 to 0x498
+    'instance::children_stride' => '0x10', // not found
+
+    'gui_object::background_color3' => '0x540', // from 0x548 to 0x540
+    'gui_object::border_color3' => '0x54c', // from 0x554 to 0x54c
+    'gui_object::image' => '0x988', // from 0x990 to 0x988
+    'gui_object::layout_order' => '0x580', // from 0x588 to 0x580
+    'gui_object::position' => '0x510', // from 0x518 to 0x510
+    'gui_object::frame_position_x' => '0x510', // from 0x518 to 0x510
+    'gui_object::frame_position_y' => '0x518', // from 0x520 to 0x518
+    'gui_object::rich_text' => '0xb88', // from 0xb7d to 0xb88
+    'gui_object::rotation' => '0xe8', // from 0x188 to 0xe8
+    'gui_object::screen_gui_enabled' => '0x4c4', // from 0x4cc to 0x4c4
+    'gui_object::size' => '0x530', // from 0x538 to 0x530
+    'gui_object::text' => '0xdf0', // from 0xa60 to 0xdf0
+    'gui_object::text_color3' => '0xea0', // from 0xe70 to 0xea0
+    'gui_object::text_color3_fallback' => '0xea0', // from 0xe70 to 0xea0
+    'gui_object::visible' => '0x5ad', // from 0x5b5 to 0x5ad
+
+    'mouse_service::input_object' => '0xf0', // from 0x110 to 0xf0
+    'mouse_service::mouse_position' => '0xd4', // from 0xec to 0xd4
+    'mouse_service::shiftlock_state' => '0x0', // not found
+    'mouse_service::shiftlock_state_alt' => '0x0', // not found
+    'mouse_service::sensitivity_pointer' => '0x0', // from 0x7cb9ad0 to 0x0
+
+    'camera::position' => '0xfc', // from 0x11c to 0xfc
+    'camera::rotation' => '0xd8', // from 0xf8 to 0xd8
+    'camera::subject' => '0xc8', // from 0xe8 to 0xc8
+    'camera::position_offset' => '0x0', // not found
+    'camera::viewport' => '0x28c', // from 0x2ac to 0x28c
+    'camera::viewport_size' => '0x2cc', // from 0x2e8 to 0x2cc
+
+    'chat::is_focused' => '0x154', // not found
+
+    'lighting::ambient' => '0xd0', // from 0xd8 to 0xd0
+    'lighting::brightness' => '0x118', // from 0x120 to 0x118
+    'lighting::colorshift_bottom' => '0xe8', // from 0xE4 to 0xe8
+    'lighting::colorshift_top' => '0xdc', // from 0xF0 to 0xdc
+    'lighting::exposure_compensation' => '0x124', // from 0x12c to 0x124
+    'lighting::fog_color' => '0xf4', // from 0xfc to 0xf4
+    'lighting::fog_end' => '0x12c', // from 0x134 to 0x12c
+    'lighting::fog_start' => '0x130', // from 0x138 to 0x130
+    'lighting::geographic_latitude' => '0x134', // from 0x190 to 0x134
+    'lighting::outdoor_ambient' => '0x100', // from 0x108 to 0x100
+
+    'sky::moon_angular_size' => '0x244', // from 0x25c to 0x244
+    'sky::moon_texture_id' => '0xc8', // from 0xe0 to 0xc8
+    'sky::skybox_bk' => '0xf8', // from 0x110 to 0xf8
+    'sky::skybox_dn' => '0x128', // from 0x140 to 0x128
+    'sky::skybox_ft' => '0x158', // from 0x170 to 0x158
+    'sky::skybox_lf' => '0x188', // from 0x1a0 to 0x188
+    'sky::skybox_orientation' => '0x238', // from 0x250 to 0x238
+    'sky::skybox_rt' => '0x1b8', // from 0x1d0 to 0x1b8
+    'sky::skybox_up' => '0x1e8', // from 0x200 to 0x1e8
+    'sky::star_count' => '0x248', // from 0x260 to 0x248
+    'sky::sun_angular_size' => '0x23c', // from 0x264 to 0x23c
+    'sky::sun_texture_id' => '0x218', // from 0x230 to 0x218
+
+    'mesh_part::mesh_id' => '0x310', // from 0x2f8 to 0x310
+    'mesh_part::special_mesh_id' => '0xf8', // from 0x108 to 0xf8
+    'mesh_part::texture' => '0x340', // from 0x318 to 0x340
+    'special_mesh::mesh_id' => '0xf8', // from 0x108 to 0xf8
+    'special_mesh::scale' => '0xc4', // from 0xdc to 0xc4
+
+    'team::team_color' => '0xb8', // from 0x350 to 0xb8
+
+    'rbx_string::length' => '0x10',
+
+    'stats_item::value' => '0xc8', // from 0x2c8 to 0xc8
+
+    'workspace::gravity' => '0x1b4', // from 0x210 to 0x1b4
+    'workspace::gravity_container' => '0x368', // from 0x408 to 0x368
+    'workspace::primitives_pointer1' => '0x368', // from 0x408 to 0x368
+    'workspace::primitives_pointer2' => '0x0', // from 0x280 to 0x0
+
+    'replicator::nextgen_replicator' => '0x0',
+    'fflags::target_time_delay_facctor_tenths' => '0x0'
+];
